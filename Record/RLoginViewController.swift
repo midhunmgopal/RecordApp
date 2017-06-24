@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Alamofire
 
-class RLoginViewController: UIViewController {
+
+class RLoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textfieldUsername: UITextField!
     @IBOutlet weak var textfieldPassword: UITextField!
@@ -16,7 +18,8 @@ class RLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textfieldUsername.delegate = self
+        textfieldPassword.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +43,7 @@ class RLoginViewController: UIViewController {
     }
     */
     
+    
     // MARK:- ACTIONS
     
     @IBAction func didTappedSignupButton(_ sender: Any) {
@@ -47,6 +51,59 @@ class RLoginViewController: UIViewController {
     }
     
     @IBAction func didTappedLoginButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "SegueLoginToHome", sender: nil)
+        loginUser()
+    }
+    
+    
+    //MARK:- TEXT FIELD
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
+
+
+//MARK:- URL SERVICE CALL
+extension RLoginViewController {
+    
+    /**
+     Login the user.
+     */
+    fileprivate func loginUser() {
+        
+        guard
+            let email = textfieldUsername?.text,
+            let password = textfieldPassword?.text
+            else {
+                return
+        }
+        
+        let urlPath = "?token=ABCD&email=\(email)&password=\(password)"
+        let urlString = getComplete(url: kLoginUser, path: urlPath)
+        
+        
+        self.performSegue(withIdentifier: "SegueLoginToHome", sender: nil)
+        
+        /*
+         Error received on service call.
+         responseSerializationFailed(Alamofire.AFError.ResponseSerializationFailureReason.jsonSerializationFailed(Error Domain=NSCocoaErrorDomain Code=3840 "Invalid value around character 0." UserInfo={NSDebugDescription=Invalid value around character 0.}))
+         */
+        
+        
+        Alamofire.request(urlString)
+            .validate(contentType: ["application/json", "text/html"])
+            .responseJSON { (response) in
+            
+            switch response.result {
+            case .success:
+                self.performSegue(withIdentifier: "SegueLoginToHome", sender: nil)
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+}
+

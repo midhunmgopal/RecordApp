@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470C96945010C0838C19FE44 /* Pods_Record.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361DD23AFFE9C179556E7AD9 /* Pods_Record.framework */; };
 		A09318831EFE75F9008879CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318821EFE75F9008879CC /* AppDelegate.swift */; };
 		A09318851EFE75F9008879CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318841EFE75F9008879CC /* ViewController.swift */; };
 		A09318881EFE75F9008879CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09318861EFE75F9008879CC /* Main.storyboard */; };
@@ -20,9 +21,14 @@
 		A09318A21EFEAB65008879CC /* RMyAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A11EFEAB65008879CC /* RMyAppViewController.swift */; };
 		A09318A41EFEAB7C008879CC /* RMyAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A31EFEAB7C008879CC /* RMyAlbumViewController.swift */; };
 		A09318A61EFEAB8A008879CC /* RMyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A51EFEAB8A008879CC /* RMyInfoViewController.swift */; };
+		A09318A91EFEB17C008879CC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A81EFEB17C008879CC /* Networking.swift */; };
+		A0F3D8F11EFED6B2003721B1 /* RImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F3D8F01EFED6B2003721B1 /* RImageDisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		361DD23AFFE9C179556E7AD9 /* Pods_Record.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Record.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A27D0D5E937CDA437B5011B /* Pods-Record.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Record.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Record/Pods-Record.debug.xcconfig"; sourceTree = "<group>"; };
+		5A4DD3EC906E39C28D350573 /* Pods-Record.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Record.release.xcconfig"; path = "Pods/Target Support Files/Pods-Record/Pods-Record.release.xcconfig"; sourceTree = "<group>"; };
 		A093187F1EFE75F9008879CC /* Record.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Record.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09318821EFE75F9008879CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09318841EFE75F9008879CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		A09318A11EFEAB65008879CC /* RMyAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMyAppViewController.swift; sourceTree = "<group>"; };
 		A09318A31EFEAB7C008879CC /* RMyAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMyAlbumViewController.swift; sourceTree = "<group>"; };
 		A09318A51EFEAB8A008879CC /* RMyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMyInfoViewController.swift; sourceTree = "<group>"; };
+		A09318A81EFEB17C008879CC /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A0F3D8F01EFED6B2003721B1 /* RImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RImageDisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470C96945010C0838C19FE44 /* Pods_Record.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,8 @@
 			children = (
 				A09318811EFE75F9008879CC /* Record */,
 				A09318801EFE75F9008879CC /* Products */,
+				AFAB0680C6F46A2A75D524F2 /* Pods */,
+				CE91E98829B3449A5938E892 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +81,7 @@
 		A09318811EFE75F9008879CC /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				A09318A71EFEB149008879CC /* Networking */,
 				A093189C1EFE9956008879CC /* Home */,
 				A09318971EFE7EAB008879CC /* Login */,
 				A09318821EFE75F9008879CC /* AppDelegate.swift */,
@@ -100,8 +112,34 @@
 				A09318A11EFEAB65008879CC /* RMyAppViewController.swift */,
 				A09318A31EFEAB7C008879CC /* RMyAlbumViewController.swift */,
 				A09318A51EFEAB8A008879CC /* RMyInfoViewController.swift */,
+				A0F3D8F01EFED6B2003721B1 /* RImageDisplayViewController.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		A09318A71EFEB149008879CC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A09318A81EFEB17C008879CC /* Networking.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		AFAB0680C6F46A2A75D524F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A27D0D5E937CDA437B5011B /* Pods-Record.debug.xcconfig */,
+				5A4DD3EC906E39C28D350573 /* Pods-Record.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE91E98829B3449A5938E892 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				361DD23AFFE9C179556E7AD9 /* Pods_Record.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A09318941EFE75FA008879CC /* Build configuration list for PBXNativeTarget "Record" */;
 			buildPhases = (
+				F29BF793A624D527F39AA3B3 /* [CP] Check Pods Manifest.lock */,
 				A093187B1EFE75F9008879CC /* Sources */,
 				A093187C1EFE75F9008879CC /* Frameworks */,
 				A093187D1EFE75F9008879CC /* Resources */,
+				02894A782EDD137C82CC1A32 /* [CP] Embed Pods Frameworks */,
+				4AB9DD0CA05311C12926BDBD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +177,7 @@
 				TargetAttributes = {
 					A093187E1EFE75F9008879CC = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -171,16 +213,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02894A782EDD137C82CC1A32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Record/Pods-Record-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AB9DD0CA05311C12926BDBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Record/Pods-Record-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F29BF793A624D527F39AA3B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A093187B1EFE75F9008879CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A093188B1EFE75F9008879CC /* Record.xcdatamodeld in Sources */,
+				A09318A91EFEB17C008879CC /* Networking.swift in Sources */,
 				A093189B1EFE91A7008879CC /* RLoginViewController.swift in Sources */,
 				A09318A41EFEAB7C008879CC /* RMyAlbumViewController.swift in Sources */,
 				A093189E1EFE9973008879CC /* RHomeViewController.swift in Sources */,
 				A09318A01EFEA929008879CC /* RHomeTableViewCell.swift in Sources */,
+				A0F3D8F11EFED6B2003721B1 /* RImageDisplayViewController.swift in Sources */,
 				A09318851EFE75F9008879CC /* ViewController.swift in Sources */,
 				A09318A21EFEAB65008879CC /* RMyAppViewController.swift in Sources */,
 				A09318991EFE7F24008879CC /* RSignupViewController.swift in Sources */,
@@ -308,10 +400,12 @@
 		};
 		A09318951EFE75FA008879CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A27D0D5E937CDA437B5011B /* Pods-Record.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Record/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myproject.Record;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -322,10 +416,12 @@
 		};
 		A09318961EFE75FA008879CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A4DD3EC906E39C28D350573 /* Pods-Record.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Record/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myproject.Record;
 				PRODUCT_NAME = "$(TARGET_NAME)";

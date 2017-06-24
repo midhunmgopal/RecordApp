@@ -1,5 +1,5 @@
 //
-//  RMyAppViewController.swift
+//  RImageDisplayViewController.swift
 //  Record
 //
 //  Created by Ovoid on 24/06/17.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class RMyAppViewController: UIImagePickerController {
+class RImageDisplayViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var displayImage: UIImage?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.sourceType = .camera
-        
+        imageView.image = displayImage
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,5 +36,7 @@ class RMyAppViewController: UIImagePickerController {
     }
     */
 
+    @IBAction func didTappedDismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
-

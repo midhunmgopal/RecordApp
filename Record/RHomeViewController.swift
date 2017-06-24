@@ -78,6 +78,10 @@ extension RHomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case MenuItem.MyApp.rawValue:
+            let cameraController = RMyAppViewController()
+            self.navigationController?.pushViewController(cameraController, animated: true)
+            
+            
             break
             
         case MenuItem.MyAlbum.rawValue:
