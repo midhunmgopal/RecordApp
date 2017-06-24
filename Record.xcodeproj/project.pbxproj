@@ -13,6 +13,13 @@
 		A093188B1EFE75F9008879CC /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A09318891EFE75F9008879CC /* Record.xcdatamodeld */; };
 		A093188D1EFE75F9008879CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A093188C1EFE75F9008879CC /* Assets.xcassets */; };
 		A09318901EFE75F9008879CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A093188E1EFE75F9008879CC /* LaunchScreen.storyboard */; };
+		A09318991EFE7F24008879CC /* RSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318981EFE7F24008879CC /* RSignupViewController.swift */; };
+		A093189B1EFE91A7008879CC /* RLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093189A1EFE91A7008879CC /* RLoginViewController.swift */; };
+		A093189E1EFE9973008879CC /* RHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093189D1EFE9972008879CC /* RHomeViewController.swift */; };
+		A09318A01EFEA929008879CC /* RHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093189F1EFEA929008879CC /* RHomeTableViewCell.swift */; };
+		A09318A21EFEAB65008879CC /* RMyAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A11EFEAB65008879CC /* RMyAppViewController.swift */; };
+		A09318A41EFEAB7C008879CC /* RMyAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A31EFEAB7C008879CC /* RMyAlbumViewController.swift */; };
+		A09318A61EFEAB8A008879CC /* RMyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09318A51EFEAB8A008879CC /* RMyInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		A093188C1EFE75F9008879CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A093188F1EFE75F9008879CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A09318911EFE75FA008879CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09318981EFE7F24008879CC /* RSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSignupViewController.swift; sourceTree = "<group>"; };
+		A093189A1EFE91A7008879CC /* RLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLoginViewController.swift; sourceTree = "<group>"; };
+		A093189D1EFE9972008879CC /* RHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHomeViewController.swift; sourceTree = "<group>"; };
+		A093189F1EFEA929008879CC /* RHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHomeTableViewCell.swift; sourceTree = "<group>"; };
+		A09318A11EFEAB65008879CC /* RMyAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMyAppViewController.swift; sourceTree = "<group>"; };
+		A09318A31EFEAB7C008879CC /* RMyAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMyAlbumViewController.swift; sourceTree = "<group>"; };
+		A09318A51EFEAB8A008879CC /* RMyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMyInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,8 @@
 		A09318811EFE75F9008879CC /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				A093189C1EFE9956008879CC /* Home */,
+				A09318971EFE7EAB008879CC /* Login */,
 				A09318821EFE75F9008879CC /* AppDelegate.swift */,
 				A09318841EFE75F9008879CC /* ViewController.swift */,
 				A09318861EFE75F9008879CC /* Main.storyboard */,
@@ -65,6 +81,27 @@
 				A09318891EFE75F9008879CC /* Record.xcdatamodeld */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		A09318971EFE7EAB008879CC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A09318981EFE7F24008879CC /* RSignupViewController.swift */,
+				A093189A1EFE91A7008879CC /* RLoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		A093189C1EFE9956008879CC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A093189D1EFE9972008879CC /* RHomeViewController.swift */,
+				A093189F1EFEA929008879CC /* RHomeTableViewCell.swift */,
+				A09318A11EFEAB65008879CC /* RMyAppViewController.swift */,
+				A09318A31EFEAB7C008879CC /* RMyAlbumViewController.swift */,
+				A09318A51EFEAB8A008879CC /* RMyInfoViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +136,7 @@
 				TargetAttributes = {
 					A093187E1EFE75F9008879CC = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -140,8 +177,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A093188B1EFE75F9008879CC /* Record.xcdatamodeld in Sources */,
+				A093189B1EFE91A7008879CC /* RLoginViewController.swift in Sources */,
+				A09318A41EFEAB7C008879CC /* RMyAlbumViewController.swift in Sources */,
+				A093189E1EFE9973008879CC /* RHomeViewController.swift in Sources */,
+				A09318A01EFEA929008879CC /* RHomeTableViewCell.swift in Sources */,
 				A09318851EFE75F9008879CC /* ViewController.swift in Sources */,
+				A09318A21EFEAB65008879CC /* RMyAppViewController.swift in Sources */,
+				A09318991EFE7F24008879CC /* RSignupViewController.swift in Sources */,
 				A09318831EFE75F9008879CC /* AppDelegate.swift in Sources */,
+				A09318A61EFEAB8A008879CC /* RMyInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +310,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Record/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myproject.Record;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -278,10 +324,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Record/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myproject.Record;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -305,6 +353,7 @@
 				A09318961EFE75FA008879CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

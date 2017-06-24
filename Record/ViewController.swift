@@ -10,14 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelSample: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.perform(#selector(showNextScreen), with: nil, afterDelay: TimeInterval(0.5))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
+    }
+    
+    @objc fileprivate func showNextScreen() {
+        let loginControler = storyboard?.instantiateViewController(withIdentifier: "RLoginViewController") as! RLoginViewController
+        self.navigationController?.pushViewController(loginControler, animated: true)
     }
 
 
